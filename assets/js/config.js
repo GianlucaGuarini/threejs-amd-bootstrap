@@ -4,9 +4,9 @@
  * 
  */
 requirejs.config({
-	paths: {
-		'threejs': '../vendor/threejs/build/three',
-		'lodash':'../vendor/lodash/dist/lodash'
-	},
-	shim: {}
+  paths: {
+    'threejs': '../vendor/threejs/build/three',
+    'lodash':'../vendor/lodash/dist/lodash'
+  },
+  shim: {}
 });

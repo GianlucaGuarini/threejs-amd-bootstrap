@@ -1,23 +1,23 @@
 define(['meshes/Cube','threejs', 'lodash'], function (Cube) {
-	'use strict';
-	return function (customOptions) {
+  'use strict';
+  return function (customOptions) {
 
-		/**
-		 * Merge the options passed to this class the default options
-		 */
-		
-		var options = _.extend({
-			ambientLight: new THREE.AmbientLight(0x009900),
-			directionalLight: new THREE.DirectionalLight(0xffffff)
-		}, customOptions);
+    /**
+     * Merge the options passed to this class the default options
+     */
+    
+    var options = _.extend({
+      ambientLight: new THREE.AmbientLight(0x009900),
+      directionalLight: new THREE.DirectionalLight(0xffffff)
+    }, customOptions);
 
-		/**
-		 *
-		 * Return an extended version of the threejs PerspectiveCamera class
-		 * 
-		 */
-		
-		return _.extend(new THREE.Scene(), {
+    /**
+     *
+     * Return an extended version of the threejs PerspectiveCamera class
+     * 
+     */
+    
+    return _.extend(new THREE.Scene(), {
 
       /**
        *
@@ -26,29 +26,29 @@ define(['meshes/Cube','threejs', 'lodash'], function (Cube) {
        *
        */
       
-			addCube: function () {
-				var mesh = new Cube({
-					color: 'green'
-				});
-				
-				this.add(mesh);
+      addCube: function () {
+        var mesh = new Cube({
+          color: 'green'
+        });
+        
+        this.add(mesh);
 
-				return mesh;
+        return mesh;
 
-			},
-			addLights: function () {
+      },
+      addLights: function () {
 
-				// add lights
-				this.add(options.ambientLight);
-				options.directionalLight.position.set(1, 1, 1).normalize();
-				this.add(options.directionalLight);
+        // add lights
+        this.add(options.ambientLight);
+        options.directionalLight.position.set(1, 1, 1).normalize();
+        this.add(options.directionalLight);
 
-				return this;
+        return this;
 
-			}
+      }
 
-		});
+    });
 
-	};
+  };
 
 });
