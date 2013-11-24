@@ -1,3 +1,6 @@
+/**
+ * threejs application
+ */
 require(['config'], function() {
   'use strict';
   require([
@@ -7,22 +10,37 @@ require(['config'], function() {
     'threejs',
     'lodash'
   ], function(Renderer, Scene, Camera) {
+    /**
+     * Initialize all the global variables
+     */
     var camera = new Camera(),
         scene = new Scene(),
         renderer = new Renderer(),
         app = {
+          /**
+           * init the application (method to trigger only once)
+           */
           init: function () {
+            // setup the camera position
             camera.position.z = 400;
-
+            // append the canvas to the body
             renderer.appendToBody();
 
+            // add custom meshes
             scene.addCube();
+            // add the lights
             scene.addLights();
 
+            // bring it on!
             this.setViewport()
                 .render();
 
+            return this;
+
           },
+          /**
+           * Render loop function
+           */
           render: function() {
 
             window.requestAnimationFrame(app.render);
@@ -34,6 +52,9 @@ require(['config'], function() {
 
             return this;
           },
+          /**
+           * set the viewport according to the window size
+           */
           setViewport: function() {
 
             renderer.updateSize();
@@ -44,6 +65,7 @@ require(['config'], function() {
           }
         };
 
+    // let's rock
     app.init();
 
     // bind events

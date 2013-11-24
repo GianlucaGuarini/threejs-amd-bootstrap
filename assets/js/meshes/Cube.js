@@ -1,14 +1,22 @@
+/**
+ * Simple cube mesh without too much ceremony
+ */
 define(['threejs', 'lodash'], function() {
 	
 	'use strict';
 
 	return function(options) {
 
-		var defaults = {
+		/**
+		 *
+		 * Merge the options passed to this class the default options
+		 *
+		 */
+		
+		var opt = _.extend({
 				size: 200,
 				color: 'red'
-			},
-			opt = _.extend(defaults, options),
+			}, options),
 			geometry = new THREE.CubeGeometry(opt.size, opt.size, opt.size),
 			material = new THREE.MeshLambertMaterial({
 				color: opt.color

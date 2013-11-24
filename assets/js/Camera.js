@@ -37,6 +37,8 @@ define(['threejs', 'lodash'], function () {
 				this.aspect = window.innerWidth / window.innerHeight;
 				this.updateProjectionMatrix();
 
+				return this;
+
 			}
 		});
 	};

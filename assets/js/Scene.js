@@ -33,6 +33,8 @@ define(['meshes/Cube','threejs', 'lodash'], function (Cube) {
 				
 				this.add(mesh);
 
+				return mesh;
+
 			},
 			addLights: function () {
 
@@ -40,6 +42,8 @@ define(['meshes/Cube','threejs', 'lodash'], function (Cube) {
 				this.add(options.ambientLight);
 				options.directionalLight.position.set(1, 1, 1).normalize();
 				this.add(options.directionalLight);
+
+				return this;
 
 			}
 

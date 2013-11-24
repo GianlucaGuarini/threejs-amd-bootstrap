@@ -27,10 +27,14 @@ define(['threejs', 'lodash'], function() {
 
         this.setSize(window.innerWidth, window.innerHeight);
 
+        return this;
+
       },
       appendToBody: function () {
 
         document.body.appendChild(this.domElement);
+
+        return this;
 
       }
     });
