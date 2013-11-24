@@ -23,7 +23,7 @@
     "load-grunt-tasks": "~0.2.0"
   },
   "author": "Gianluca Guarini",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/GianlucaGuarini/threejs-amd-example/issues"
   },
