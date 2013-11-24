@@ -1,0 +1,31 @@
+{
+  "name": "threejs-amd-example",
+  "version": "0.0.1",
+  "description": "Simple and lite threejs scaffolding demo build using requirejs",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:GianlucaGuarini/threejs-amd-example.git"
+  },
+  "keywords": [
+    "threejs",
+    "amd",
+    "requirejs"
+  ],
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "load-grunt-tasks": "~0.2.0"
+  },
+  "author": "Gianluca Guarini",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/GianlucaGuarini/threejs-amd-example/issues"
+  },
+  "homepage": "https://github.com/GianlucaGuarini/threejs-amd-example"
+}
