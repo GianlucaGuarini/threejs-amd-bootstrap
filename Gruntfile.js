@@ -17,16 +17,19 @@ module.exports = function(grunt) {
     jshint: {
       all: ['Gruntfile.js', 'assets/js/**/*.js']
     },
-    // compile the project in one single file
+    // compile the project in one single javascript file
     requirejs: {
-      options: {
-        baseUrl: 'assets/js',
-        out: 'min/build.min.js',
-        mainConfigFile: 'assets/js/config.js',
-        name: '../vendor/almond/almond',
-        include: ['main'],
-        insertRequire: ['main'],
-        wrap: true
+      compile:{
+        options: {
+          baseUrl: 'assets/js',
+          out: 'assets/min/build.min.js',
+          mainConfigFile: 'assets/js/config.js',
+          name: '../vendor/almond/almond',
+          include: ['app'],
+          insertRequire: ['app'],
+          findNestedDependencies: true,
+          wrap: true
+        }
       }
     },
   });
