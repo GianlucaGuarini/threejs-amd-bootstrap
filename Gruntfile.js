@@ -28,6 +28,7 @@ module.exports = function(grunt) {
           include: ['app'],
           insertRequire: ['app'],
           findNestedDependencies: true,
+          preserveLicenseComments:false,
           wrap: true
         }
       }
