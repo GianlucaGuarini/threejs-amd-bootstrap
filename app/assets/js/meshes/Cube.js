@@ -1,7 +1,7 @@
 /**
  * Simple cube mesh without too much ceremony
  */
-define(['threejs', 'lodash'], function() {
+define([], function() {
   
   'use strict';
 

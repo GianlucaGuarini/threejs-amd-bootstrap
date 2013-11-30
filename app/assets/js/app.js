@@ -13,7 +13,8 @@ require(['config'], function() {
     /**
      * Initialize all the global variables
      */
-    var camera = new Camera(),
+    var time = 0,
+        camera = new Camera(),
         scene = new Scene(),
         renderer = new Renderer(),
         app = {
@@ -22,12 +23,13 @@ require(['config'], function() {
            */
           init: function () {
             // setup the camera position
-            camera.position.z = 400;
+            camera.position.z = 800;
             // append the canvas to the body
             renderer.appendToBody();
 
             // add custom meshes
             scene.addCube();
+            scene.addSphere();
             // add the lights
             scene.addLights();
 
@@ -45,10 +47,16 @@ require(['config'], function() {
 
             window.requestAnimationFrame(app.render);
 
+            // move the cube
             scene.children[0].rotation.x += 0.005;
             scene.children[0].rotation.y += 0.01;
 
+            // let bounce the ball
+            scene.children[1].position.y += Math.sin(time) * 5;
+
             renderer.render(scene, camera);
+
+            time += 0.1;
 
             return this;
           },

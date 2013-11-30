@@ -9,21 +9,40 @@ module.exports = function(grunt) {
       js: {
         // watch all the changes in these files
         files: [
-          'assets/js/**/*.js'
+          'app/assets/js/**/*.js'
         ],
         tasks: ['jshint']
       }
     },
+    clean: {
+      build: {
+        src: ["dist"]
+      }
+    },
+    copy: {
+      build: {
+        files:[{
+          expand: true,
+          cwd:'app/',
+          src: [
+            '**',
+            // exclude these folders because we'll pick only the files needed using the requirejs task
+            '!assets/js/**',
+            '!assets/vendor/**'],
+          dest: 'dist/'
+        }]
+      },
+    },
     jshint: {
-      all: ['Gruntfile.js', 'assets/js/**/*.js']
+      all: ['Gruntfile.js', 'app/assets/js/**/*.js']
     },
     // compile the project in one single javascript file
     requirejs: {
-      compile:{
+      build:{
         options: {
-          baseUrl: 'assets/js',
-          out: 'assets/min/build.min.js',
-          mainConfigFile: 'assets/js/config.js',
+          baseUrl: 'app/assets/js',
+          out: 'dist/assets/js/build.min.js',
+          mainConfigFile: 'app/assets/js/config.js',
           name: '../vendor/almond/almond',
           include: ['app'],
           insertRequire: ['app'],
@@ -38,6 +57,6 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'requirejs']);
+  grunt.registerTask('default', ['clean','jshint', 'copy','requirejs']);
   
 };

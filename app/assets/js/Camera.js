@@ -11,7 +11,7 @@ define(['threejs', 'lodash'], function () {
      */
 
     var options = _.extend({
-      fov: 70,
+      fov: 50,
       aspect: window.innerWidth / window.innerHeight,
       near: 1,
       far: 1000

@@ -1,4 +1,9 @@
-define(['meshes/Cube','threejs', 'lodash'], function (Cube) {
+define([
+  'meshes/Cube',
+  'meshes/Sphere',
+  'threejs',
+  'lodash'
+], function (Cube,Sphere) {
   'use strict';
   return function (customOptions) {
 
@@ -25,15 +30,29 @@ define(['meshes/Cube','threejs', 'lodash'], function (Cube) {
        * Do not override the original threejs scene methods and properties
        *
        */
-      
+
       addCube: function () {
-        var mesh = new Cube({
+
+        var cube = new Cube({
           color: 'green'
         });
         
-        this.add(mesh);
+        cube.position.x = 300;
 
-        return mesh;
+        this.add(cube);
+
+        return cube;
+
+      },
+      addSphere: function () {
+
+        var sphere = new Sphere();
+
+        sphere.position.x = -300;
+
+        this.add(sphere);
+
+        return sphere;
 
       },
       addLights: function () {
