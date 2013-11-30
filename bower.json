@@ -13,7 +13,8 @@
     "requirejs": "~2.1.9",
     "threejs": "*",
     "lodash": "~2.3.0",
-    "almond": "~0.2.7"
+    "almond": "~0.2.7",
+    "requirejs-text": "~2.0.10"
   },
   "authors": [
     "Gianluca Guarini <gianluca.guarini@gmail.com>"

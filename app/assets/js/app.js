@@ -17,6 +17,8 @@ require(['config'], function() {
         camera = new Camera(),
         scene = new Scene(),
         renderer = new Renderer(),
+        // meshes
+        sphere,cube,
         app = {
           /**
            * init the application (method to trigger only once)
@@ -28,8 +30,8 @@ require(['config'], function() {
             renderer.appendToBody();
 
             // add custom meshes
-            scene.addCube();
-            scene.addSphere();
+            cube = scene.addCube();
+            sphere = scene.addSphere();
             // add the lights
             scene.addLights();
 
@@ -45,14 +47,17 @@ require(['config'], function() {
            */
           render: function() {
 
+
             window.requestAnimationFrame(app.render);
 
             // move the cube
-            scene.children[0].rotation.x += 0.005;
-            scene.children[0].rotation.y += 0.01;
+            cube.rotation.x += 0.005;
+            cube.rotation.y += 0.01;
 
             // let bounce the ball
-            scene.children[1].position.y += Math.sin(time) * 5;
+            sphere.position.y += Math.sin(time) * 5;
+            // animate the vertex shader
+            sphere.material.uniforms.amplitude.value = Math.sin(time);
 
             renderer.render(scene, camera);
 
