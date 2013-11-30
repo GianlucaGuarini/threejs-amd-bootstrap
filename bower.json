@@ -1,10 +1,10 @@
 {
-  "name": "threejs amd example",
-  "version": "0.0.1",
+  "name": "threejs-amd-bootstrap",
+  "version": "0.0.2",
   "ignore": [
     "**/.*",
     "node_modules",
-    "assets/vendor",
+    "app/assets/vendor",
     "bower_components",
     "test",
     "tests"
