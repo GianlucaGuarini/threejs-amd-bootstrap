@@ -20,10 +20,8 @@ This project provides you all the javascript code needed to start coding any thr
 
 - [threejs](http://threejs.org/) [core dependency]
 - [lodash](http://lodash.com/) A utility library delivering consistency, customization, performance, & extras. [core dependency]
-
 - [requirejs](http://requirejs.org/) [development dependency]
 - [requirejs-text](https://github.com/requirejs/text) An AMD loader plugin for loading text resources, used in this case to load custom shaders files [development dependency]
-
 - [almond](https://github.com/jrburke/almond) A minimal AMD API implementation for use after optimized builds[production dependency]
 
 ### Installation
