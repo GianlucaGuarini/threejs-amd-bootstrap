@@ -36,7 +36,7 @@ $ npm install && bower install
 
 ### How to build
 
-Run the command `$ grunt` using your terminal from the project folder to create the ``dist`` where you will find all the files needed for the production environment
+Run the command `$ grunt` using your terminal from the project folder to create the ``dist`` folder where you will find all the files needed for the production environment
 
 ### LICENSE
 
