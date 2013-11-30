@@ -48,8 +48,6 @@ define([
       values.push(Math.random() * 30);
     });
 
-    console.log(mesh);
-
     return mesh;
 
   };
