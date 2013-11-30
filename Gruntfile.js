@@ -19,13 +19,20 @@ module.exports = function(grunt) {
         src: ["dist"]
       }
     },
+    processhtml: {
+      build: {
+        files: {
+          'dist/index.html': ['app/index.html']
+        }
+      }
+    },
     copy: {
       build: {
         files:[{
           expand: true,
           cwd:'app/',
           src: [
-            '**',
+            'assets/**',
             // exclude these folders because we'll pick only the files needed using the requirejs task
             '!assets/js/**',
             '!assets/vendor/**'],
@@ -57,6 +64,6 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Default task.
-  grunt.registerTask('default', ['clean','jshint', 'copy','requirejs']);
+  grunt.registerTask('default', ['clean','jshint', 'copy','requirejs','processhtml']);
   
 };

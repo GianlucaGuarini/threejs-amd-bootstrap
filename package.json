@@ -22,7 +22,8 @@
     "grunt-contrib-watch": "~0.5.3",
     "load-grunt-tasks": "~0.2.0",
     "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-clean": "~0.5.0"
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-processhtml": "~0.2.5"
   },
   "author": "Gianluca Guarini",
   "license": "MIT",
