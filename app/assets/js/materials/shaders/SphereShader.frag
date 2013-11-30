@@ -1,3 +1,7 @@
+// Simple Fragment Shader 
+// by Paul Lewis
+// http://www.html5rocks.com/en/tutorials/webgl/shaders/
+
 // same name and type as VS
 varying vec3 vNormal;
 
