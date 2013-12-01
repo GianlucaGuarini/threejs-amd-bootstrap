@@ -14,5 +14,5 @@ results
 npm-debug.log
 # folders to ignore
 node_modules
-dist
+# dist
 app/assets/vendor
