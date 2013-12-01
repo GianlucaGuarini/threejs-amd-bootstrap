@@ -1,0 +1,31 @@
+{
+  "name": "threejs-amd-bootstrap",
+  "version": "0.0.2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/assets/vendor",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.9",
+    "threejs": "*",
+    "lodash": "~2.3.0",
+    "almond": "~0.2.7",
+    "requirejs-text": "~2.0.10"
+  },
+  "authors": [
+    "Gianluca Guarini <gianluca.guarini@gmail.com>"
+  ],
+  "description": "Simple and lite threejs scaffolding demo build using requirejs",
+  "main": "app.js",
+  "keywords": [
+    "threejs",
+    "amd",
+    "requirejs"
+  ],
+  "license": "MIT",
+  "private": true
+}
