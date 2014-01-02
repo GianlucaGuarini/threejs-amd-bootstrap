@@ -3,7 +3,7 @@
 If your answer to the following question is always __yes__ you are in the right place:
 
 - Do you love [threejs](http://threejs.org/) ? (.. if you are here of course you do!)
-- Do you want to build your first threejs application having a clean and well structured scaffold? 
+- Do you want to build your first threejs application having a clean and well structured scaffold?
 - Are you confused by all the amazing threejs examples build all single html files?
 
 This project provides you all the javascript code needed to start coding any threejs application and it includes also a simple "out of the box" [grunt](http://gruntjs.com/) script to build it making the app ready to be directly uploaded to the live server.
@@ -38,13 +38,17 @@ $ npm install && bower install
 
 Run the command `$ grunt` using your terminal from the project folder to create the ``dist`` folder where you will find all the files needed for the production environment
 
+### Changelog
+
+- 0.0.3 added: stats.js and dat.gui.js to debug
+
 ### LICENSE
 
 ```
 
 The MIT License (MIT)
 
-Copyright (c) 2013 Gianluca Guarini
+Copyright (c) 2014 Gianluca Guarini
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

@@ -1,6 +1,6 @@
 {
   "name": "threejs-amd-example",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple and lite threejs scaffolding demo build using requirejs",
   "main": "Gruntfile.js",
   "scripts": {
