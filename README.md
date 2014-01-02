@@ -23,6 +23,8 @@ This project provides you all the javascript code needed to start coding any thr
 - [requirejs](http://requirejs.org/) [development dependency]
 - [requirejs-text](https://github.com/requirejs/text) An AMD loader plugin for loading text resources, used in this case to load custom shaders files [development dependency]
 - [almond](https://github.com/jrburke/almond) A minimal AMD API implementation for use after optimized builds[production dependency]
+- [stats.js](https://github.com/mrdoob/stats.js/) JavaScript Performance Monitor [development dependency]
+- [dat.gui](http://code.google.com/p/dat-gui/) A lightweight graphical user interface for changing variables in JavaScript. [development dependency]
 
 ### Installation
 
